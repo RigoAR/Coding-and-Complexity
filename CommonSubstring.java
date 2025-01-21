@@ -1,4 +1,4 @@
-/*
+
 public class CommonSubstring {
     public static void main(String[] args)
     {
@@ -19,7 +19,7 @@ public class CommonSubstring {
             {
                 if (text1.charAt(i) == text2.charAt(j))
                 {
-                    num[i] = text1.charAt(i);
+                    num[i] = String.valueOf(text1.charAt(i));
                     break;
                 }
             }
@@ -30,4 +30,3 @@ public class CommonSubstring {
     }
 }
 
- */
