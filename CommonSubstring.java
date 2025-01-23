@@ -1,32 +1,35 @@
 
 public class CommonSubstring {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         String text1 = "gears of war";
         String text2 = "history of warriors";
-        CommonSubstring start = new CommonSubstring();
-        System.out.println("The number of common subsequence is " + start.find(text1, text2));
+        System.out.println("Common substring: " + find(text1, text2));
     }
 
-    public static String[] find(String text1, String text2)
+    public static String find(String text1, String text2)
     {
-        String[] num = new String[text1.length() + text2.length()];
+        String result = "";
+        int maxLength = 0;
 
-
-        for(int i = 0; i < text1.length(); i++)
+        for (int i = 0; i < text1.length(); i++)
         {
-            for(int j = 0; j < text2.length(); j++)
+            for (int j = 0; j < text2.length(); j++)
             {
-                if (text1.charAt(i) == text2.charAt(j))
+                int length = 0;
+                while (i + length < text1.length() && j + length < text2.length() && text1.charAt(i + length) == text2.charAt(j + length))
                 {
-                    num[i] = String.valueOf(text1.charAt(i));
-                    break;
+                    length++;
+                }
+                if (length > maxLength)
+                {
+                    maxLength = length;
+                    result = text1.substring(i, i + length);
                 }
             }
         }
 
-        return num;
-
+        return result;
     }
 }
+
 
