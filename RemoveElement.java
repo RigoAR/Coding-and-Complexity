@@ -9,13 +9,13 @@ public class RemoveElement {
     public static int remove(int[] nums, int val) {
         int count = 0;
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != val) {
-                nums[count] = nums[i];
-                count++;
+        for (int i = 0; i < nums.length; i++) { // O(n)
+            if (nums[i] != val) { // O(1)
+                nums[count] = nums[i]; // O(1)
+                count++; // O(1)
             }
         }
 
-        return count;
+        return count; // O(1)
     }
 }

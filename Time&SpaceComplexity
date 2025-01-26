@@ -1,0 +1,19 @@
+CommonSubsequence.java
+Time Complexity: O(n*m), Ω(min(n,m))
+This is because the nested loops iterate through both strings, with an inner break statement. Worst case requires checking each character of text2 for each character of text1.
+
+CommonSubstring.java
+Time Complexity: O(n²m), Ω(nm)
+This is because the triple nested structure (two explicit loops, one while loop) compares substrings at every possible starting position.
+
+NotFibonacci.java
+Time Complexity: O(times), Ω(times)
+This is because the single linear loop generates sequence elements based on previous two elements.
+
+WhereInSequence.java
+Time Complexity: O(times), Ω(times)
+the is because it first generates sequence in O(times), then searches through generated sequence in another O(times) pass.
+
+RemoveElement.java
+Time Complexity: O(n), Ω(n)
+This is because it is single pass through array, moving non-matching elements to front while tracking count.
